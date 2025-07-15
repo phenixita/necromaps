@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "necroapp",
+    "slug": "necroapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "jsEngine": "hermes",
+    "platforms": ["ios", "android"],
+    "sdkVersion": "50.0.0"
+  }
+}
