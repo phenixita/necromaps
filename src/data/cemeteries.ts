@@ -1,4 +1,12 @@
-export const cemeteries = [
+export interface Cemetery {
+  id: string;
+  city: string;
+  name: string;
+  street: string;
+  coordinates: { lat: number; lng: number };
+}
+
+export const cemeteries: Cemetery[] = [
   {
     id: 'c1',
     city: 'Roma',

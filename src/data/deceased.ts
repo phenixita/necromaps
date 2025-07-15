@@ -1,4 +1,14 @@
-export const deceased = [
+export interface Deceased {
+  id: string;
+  name: string;
+  birthDate: string;
+  deathDate: string;
+  description: string;
+  cemeteryId: string;
+  cemeteryCode: string;
+}
+
+export const deceased: Deceased[] = [
   {
     id: 'd1',
     name: 'Giuseppe Verdi',

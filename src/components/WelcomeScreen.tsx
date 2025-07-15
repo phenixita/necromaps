@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, FlatList } from 'react-native';
 import { InMemorySearchService } from '../services/InMemorySearchService';
+import type { SearchResult } from '../services/SearchService';
 
 const service = new InMemorySearchService();
 
@@ -8,15 +9,15 @@ export default function WelcomeScreen() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
 
-  const onChangeText = text => {
+  const onChangeText = (text: string) => {
     setQuery(text);
     setResults(service.searchByName(text));
   };
 
-  const renderItem = ({ item }) => (
+  const renderItem = ({ item }: any) => (
     <View style={styles.item}>
       <Text style={styles.name}>{item.name}</Text>
-      <Text style={styles.cemetery}>{item.cemetery.name} - {item.cemeteryCode}</Text>
+      <Text style={styles.cemetery}>{item.cemetery?.name} - {item.cemeteryCode}</Text>
     </View>
   );
 
@@ -31,7 +32,7 @@ export default function WelcomeScreen() {
       />
       <FlatList
         data={results}
-        keyExtractor={item => item.id}
+        keyExtractor={(item: any) => item.id}
         renderItem={renderItem}
       />
     </View>

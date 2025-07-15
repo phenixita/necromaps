@@ -5,6 +5,7 @@
 Necro Maps è la prima app dedicata a guidarti nel trovare i defunti nei cimiteri italiani.
 
 Questo repository contiene un prototipo sviluppato con [Expo](https://expo.dev/) e React Native.
+Il codice sorgente è scritto interamente in **TypeScript**.
 Lo scopo di questo documento è aiutarti a configurare l'ambiente e avviare l'app in un emulatore Android.
 
 ## Requisiti
@@ -37,14 +38,19 @@ Lo scopo di questo documento è aiutarti a configurare l'ambiente e avviare l'ap
 
 ## Struttura del progetto
 
-- `App.js` – punto di ingresso dell'app.
+- `App.tsx` – punto di ingresso dell'app.
 - `src/components` – i componenti React Native, ad esempio la **WelcomeScreen** con la ricerca.
 - `src/services` – servizi di supporto, come la ricerca in memoria.
 - `src/data` – dati fittizi utilizzati per il prototipo.
 
-## Test e lint
+## Test
 
-Al momento non sono presenti script di test o lint. In futuro saranno aggiunte istruzioni specifiche.
+Per eseguire i test unitari utilizziamo il test runner integrato di Node abbinato a `ts-node`.
+Lancia i test con:
+
+```bash
+npm test
+```
 
 ## Supporto
 
