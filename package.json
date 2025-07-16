@@ -1,7 +1,6 @@
 {
   "name": "necroapp",
   "version": "1.0.0",
-  "type": "module",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -13,7 +12,8 @@
   "dependencies": {
     "expo": "^50.0.0",
     "react": "18.2.0",
-    "react-native": "0.73.4"
+    "react-native": "0.73.4",
+    "@types/react": "~18.2.45"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",

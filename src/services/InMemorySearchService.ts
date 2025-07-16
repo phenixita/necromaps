@@ -1,6 +1,6 @@
-import { SearchService, SearchResult } from './SearchService.js';
-import { deceased } from '../data/deceased.js';
-import { cemeteries } from '../data/cemeteries.js';
+import { SearchService, SearchResult } from './SearchService';
+import { deceased } from '../data/deceased';
+import { cemeteries } from '../data/cemeteries';
 
 export class InMemorySearchService extends SearchService {
   searchByName(name: string): SearchResult[] {
