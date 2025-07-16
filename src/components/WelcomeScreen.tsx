@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, FlatList } from 'react-native';
+import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
 import { InMemorySearchService } from '../services/InMemorySearchService';
-import type { SearchResult } from '../services/SearchService';
 
 const service = new InMemorySearchService();
 
